@@ -1,0 +1,20 @@
+@{
+    Layout = "_Layout"; 
+    ViewData["TituloPag"] = "Comentarios";
+}   
+<head>
+
+<!-- <link rel="stylesheet" href="css/style.css"> -->
+<link rel="stylesheet" href="css/comentario.css">
+
+</head>
+
+
+<div id="area">
+     <form method="POST" action='@Url.Action("Depoimento", "Comentario")' id="formulario">
+    <fieldset>
+        <legend>comentario</legend>
+        <div class="pridiv"><input class="comentario" type="text" name="comentario" required><br></div>
+        <input type="submit" value="Enviar" class="enviar">
+    </fieldset>
+    </form>

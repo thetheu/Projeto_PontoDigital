@@ -1,0 +1,38 @@
+@{
+    var user = (string) ViewData["User"];
+    var adm = (string) ViewData["Adm"];
+}
+
+
+<nav class="menu">
+            <!-- <a class="toggle-nav" href="#">&#9776;</a> -->
+            <ul class="active">
+                
+                <li><a href='@Url.Action("Index", "Home")#Home'>Ponto Digital</a></li>   
+                
+                <li><img src="img/logo..jpg" class="logo"></li>
+
+                <li>
+                    <form class="search-form">
+                        <input type="text" class="pesquisa">
+                        <button class="search">Pesquisar</button>
+                    </form>
+                </li>
+            </ul>
+            <ul class="atalhos">
+                <li>
+                    <h2 class="slogan">Sua Empresa Em Seus Olhos</h2>
+                </li>
+                <li><a href='@Url.Action("Index", "QuemSomos")#QuemSomos'>Quem Somos</a></li>
+                <li><a href='@Url.Action("Index", "Sac")#Sac'>Sac</a></li>
+                <li><a href='@Url.Action("Index", "Cadastro")#Cadastro'>Cadastro</a></li>
+               @if(string.IsNullOrEmpty(user))
+               {
+                    <li><a href='@Url.Action("Index","Login")'>Login</a></li>
+               }else
+               {
+                    <li><a href='@Url.Action("Logout","Login")'>Logout</a></li>
+               }
+            </ul>
+        </nav>
+

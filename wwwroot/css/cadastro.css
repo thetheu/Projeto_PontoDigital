@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.menu h1 {
+    font-size: 60px;
+    font-family:'Barlow', sans-serif;
+    display: flex;
+    padding-top: 10px;
+    color: black;
+}
+.menu ul{
+    display: flex;
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 50px;
+    justify-content: space-around;
+}
+.menu ul:first-child{
+    border-bottom: 2px solid gray;
+}
+.menu {
+    height: 190px;
+	box-shadow:0px 1px 1px rgba(0,0,0,0.15);
+    background: #306294;
+    display: flex;
+    color: #000;
+    flex-direction: column;
+}
+.menu li {
+    display: flex;
+	float: left;
+	list-style:none;
+    font-size: 50px;
+    justify-content: first baseline;
+}
+.menu a {
+    color: #000000;
+    text-decoration: none;
+    font-family:'Barlow', sans-serif;
+}
+.menu li > a {
+    display: flex;
+	color:black;
+    text-decoration: none;
+    background-color: #306294;
+}
+.slogan{
+    display: flex;
+    font-size: 50px;
+    font-family:'Barlow', sans-serif;
+}
+.logo{
+    width: 100px;
+    height: 100px;
+    background-color: #306294;
+}
+.menu a:hover{
+    background-color: #5486b8;
+}
+.atalhos{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+
+
+/* barinha de pesquisa */
+.search-form {
+    display: flex;
+    align-items: right;
+    position: relative;
+    top: 30px;
+}
+.search-form input {
+    width:400px;
+	height:40px;
+	padding:0px 8px;
+	float: left;
+    font-size:13px;
+}
+.search-form button {
+    height:45px;
+    padding:0px 8px;
+	float:right;
+	border-radius:0px 0px 0px 0px;
+	background: #306294;
+	font-size:13px;
+    font-weight:500;
+    color:#fff;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    border-color: #fff;
+}
+
+
+
+/* inicio da programação do input */
+#area{
+    padding-left: 600px;
+    padding-top: 100px;
+    width:120px;
+    height:270px;
+}
+#area #formulario{
+    position:absolute;
+    display:block;   
+}
+fieldset{
+    background-color: #306294;
+    width: 500px;
+    height: 550px;
+}
+legend{
+    font-weight:bold;
+    font-family: "Segoe UI","Arial","Times New Roman";
+    font-size: 40px;
+    width: 600px;
+    
+}
+.nome{
+    position:absolute;
+    margin-top: 45px;
+    margin-left:90px;
+    font-size: 25px;
+}
+.email{
+    position:absolute;
+    margin-top: 105px;
+    margin-left:90px;
+    font-size: 25px;
+}
+.senha{
+    position:absolute;
+    margin-top: 155px;
+    margin-left:90px;
+    font-size: 25px;
+}
+.data{
+    position:absolute;
+    margin-top: 215px;
+    margin-left: 90px;
+    font-size: 25px;
+}
+#formulario input.campo_nome{
+    background-color: white;
+    position:absolute;
+    left:90px;
+    margin-top:80px;
+    width:400px;
+    height: 35px;
+}
+#formulario input.campo_email{ 
+    background-color: white;
+    position:absolute;
+    left:90px;
+    margin-top:130px;
+    width:400px;
+    height: 35px;
+}
+#formulario input.campo_senha{
+    background-color: white;
+    position:absolute;
+    left:90px;
+    margin-top:185px;
+    width:400px;
+    height: 35px;
+}
+.campo_data{
+    background-color: white;
+    position:absolute;
+    left:90px;
+    margin-top: 250px;
+    width:400px;
+    height: 35px;
+}
+#formulario input.btn_submit{
+    border-style:dashed;
+    position:absolute;
+    bottom: 1em;
+    right:10px;
+    background-color: white;
+    width: 10px;
+    height: 50px;
+}
+.enviar{
+    width: 130px;
+    margin-top: 380px;
+    margin-left: 400px;
+}

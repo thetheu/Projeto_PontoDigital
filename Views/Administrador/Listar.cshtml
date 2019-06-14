@@ -1,0 +1,35 @@
+@using Projeto_final;
+@using Projeto_final.Models;
+@{
+    Layout = "_LayoutAdm";
+}
+
+    <link rel="stylesheet" href="css/administrador.css">
+
+<thead class ="thead-dark"> 
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Senha</th>
+            <th>Data de Nascimento</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in ViewData["Cadastro"] as List<Cadastro>)
+        {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Nome</td>
+            <td>@item.Email</td>
+            <td>@item.Senha</td>
+            <td>@item.DataNascimento.ToShortDateString()</td>
+            <td>
+                <a href="/Cadastro/Editar?id=@item.Id" class="btn btn-light">Aprovar</a>
+                <a href="#" class="btn btn-danger">Reprovar</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+</div>

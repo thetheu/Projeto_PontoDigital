@@ -1,0 +1,63 @@
+@{
+    var user = (string) ViewData["User"];
+    var adm = (string) ViewData["Adm"];
+}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    @if( (string) ViewData["TituloPag"] == "Comentarios"){
+    <link rel="stylesheet" href="~/css/comentario.css">
+        
+}
+
+
+    <title> @ViewData["TituloPag"] - Agora vai</title>
+<body>
+    
+</body>
+</html>
+
+      
+
+<nav class="menu">
+            <!-- <a class="toggle-nav" href="#">&#9776;</a> -->
+            <ul class="active">
+                
+                <li>Ponto Digital</li>   
+                
+                <li><img src="img/logo..jpg" class="logo"></li>
+
+                <li>
+                    <form class="search-form">
+                        <input type="text" class="pesquisa">
+                        <button class="search">Pesquisar</button>
+                    </form>
+                </li>
+            </ul>
+            <ul class="atalhos">
+                <li>
+                    <h2 class="slogan">Sua Empresa Em Seus Olhos</h2>
+                </li>
+                <li><a href='@Url.Action("Index", "Administrador")#Index'>Home</a></li>
+                <li><a href='@Url.Action("Cadastros", "Administrador")#Cadastros'>Cadastros</a></li>
+                <li><a href='@Url.Action("Listar", "Administrador")#Listar'>Comentario</a></li>
+               @if(string.IsNullOrEmpty(user))
+               {
+                    <li><a href='@Url.Action("Logout","Login")'>Logout</a></li>
+               }
+            </ul>
+        </nav>
+
+        <body class="flex-container">
+    
+    @RenderBody()
+  
+
+</body>
+</html>
+</html>
+
+        
